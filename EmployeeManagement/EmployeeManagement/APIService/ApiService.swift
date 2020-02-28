@@ -10,6 +10,7 @@ import Foundation
 
 class EmployeeApiService {
     static let url = "http://dummy.restapiexample.com/api/v1/employees"
+    static let imageUrl = "http://static.tvmaze.com/uploads/images/medium_portrait/214/537337.jpg"
     typealias queryResult = (EmployeeFeed, String) -> Void
     let defaultSession = URLSession(configuration: .default)
     var dataTaskObj:URLSessionDataTask?

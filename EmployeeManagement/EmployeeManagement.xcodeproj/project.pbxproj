@@ -20,6 +20,12 @@
 		9BF8FBF324096F84005A7B14 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBF124096F84005A7B14 /* ApiService.swift */; };
 		9BF8FBF5240996A5005A7B14 /* EmployeeManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBD1240305EE005A7B14 /* EmployeeManagementTests.swift */; };
 		9BF8FBF724099832005A7B14 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBF124096F84005A7B14 /* ApiService.swift */; };
+		9BF8FBF92409A695005A7B14 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBF82409A695005A7B14 /* EmployeeListViewController.swift */; };
+		9BF8FBFA2409A695005A7B14 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBF82409A695005A7B14 /* EmployeeListViewController.swift */; };
+		9BF8FBFB2409A695005A7B14 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBF82409A695005A7B14 /* EmployeeListViewController.swift */; };
+		9BF8FBFE2409A8E9005A7B14 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBFD2409A8E9005A7B14 /* EmployeeCell.swift */; };
+		9BF8FBFF2409A8E9005A7B14 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBFD2409A8E9005A7B14 /* EmployeeCell.swift */; };
+		9BF8FC002409A8E9005A7B14 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBFD2409A8E9005A7B14 /* EmployeeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,8 @@
 		9BF8FBDE240305EE005A7B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BF8FBED24096647005A7B14 /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
 		9BF8FBF124096F84005A7B14 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		9BF8FBF82409A695005A7B14 /* EmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
+		9BF8FBFD2409A8E9005A7B14 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 		9BF8FBB9240305EA005A7B14 /* EmployeeManagement */ = {
 			isa = PBXGroup;
 			children = (
+				9BF8FBFC2409A8DA005A7B14 /* EmployeeCell */,
 				9BF8FBEC24030E99005A7B14 /* APIService */,
 				9BF8FBEB24030E99005A7B14 /* models */,
 				9BF8FBEA24030E99005A7B14 /* viewcontrollers */,
@@ -139,6 +148,7 @@
 		9BF8FBEA24030E99005A7B14 /* viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				9BF8FBF82409A695005A7B14 /* EmployeeListViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -157,6 +167,14 @@
 				9BF8FBF124096F84005A7B14 /* ApiService.swift */,
 			);
 			path = APIService;
+			sourceTree = "<group>";
+		};
+		9BF8FBFC2409A8DA005A7B14 /* EmployeeCell */ = {
+			isa = PBXGroup;
+			children = (
+				9BF8FBFD2409A8E9005A7B14 /* EmployeeCell.swift */,
+			);
+			path = EmployeeCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,8 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF8FBF92409A695005A7B14 /* EmployeeListViewController.swift in Sources */,
 				9BF8FBEE24096647005A7B14 /* EmployeeModel.swift in Sources */,
 				9BF8FBBB240305EA005A7B14 /* AppDelegate.swift in Sources */,
+				9BF8FBFE2409A8E9005A7B14 /* EmployeeCell.swift in Sources */,
 				9BF8FBF224096F84005A7B14 /* ApiService.swift in Sources */,
 				9BF8FBBD240305EA005A7B14 /* SceneDelegate.swift in Sources */,
 			);
@@ -301,9 +321,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF8FBFA2409A695005A7B14 /* EmployeeListViewController.swift in Sources */,
 				9BF8FBEF24096647005A7B14 /* EmployeeModel.swift in Sources */,
 				9BF8FBF5240996A5005A7B14 /* EmployeeManagementTests.swift in Sources */,
 				9BF8FBF324096F84005A7B14 /* ApiService.swift in Sources */,
+				9BF8FBFF2409A8E9005A7B14 /* EmployeeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,9 +333,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF8FBFB2409A695005A7B14 /* EmployeeListViewController.swift in Sources */,
 				9BF8FBDD240305EE005A7B14 /* EmployeeManagementUITests.swift in Sources */,
 				9BF8FBF024096647005A7B14 /* EmployeeModel.swift in Sources */,
 				9BF8FBF724099832005A7B14 /* ApiService.swift in Sources */,
+				9BF8FC002409A8E9005A7B14 /* EmployeeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

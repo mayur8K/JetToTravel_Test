@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Employee List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="EmployeeListViewController" customModule="EmployeeManagement" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Tg-Zo-6nR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="784"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="empCell" rowHeight="157" id="4vD-CN-Fm1" customClass="EmployeeCell" customModule="EmployeeManagement" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4vD-CN-Fm1" id="q6O-Gu-B7G">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZ3-BO-6AN">
+                                                    <rect key="frame" x="162" y="62" width="220" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vtr-Q5-s2h">
+                                                    <rect key="frame" x="13" y="21" width="131" height="114"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="131" id="bhg-LB-JVW"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vtr-Q5-s2h" firstAttribute="top" secondItem="q6O-Gu-B7G" secondAttribute="top" constant="21" id="Jp2-9c-9HG"/>
+                                                <constraint firstItem="Vtr-Q5-s2h" firstAttribute="top" secondItem="OZ3-BO-6AN" secondAttribute="bottom" constant="-62" id="XTY-dx-pUu"/>
+                                                <constraint firstAttribute="trailing" secondItem="OZ3-BO-6AN" secondAttribute="trailing" constant="32" id="gUe-xS-Jvm"/>
+                                                <constraint firstItem="OZ3-BO-6AN" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Vtr-Q5-s2h" secondAttribute="trailing" constant="8" symbolic="YES" id="gtB-Gc-ex8"/>
+                                                <constraint firstItem="Vtr-Q5-s2h" firstAttribute="centerY" secondItem="OZ3-BO-6AN" secondAttribute="centerY" constant="5.5" id="r2a-dL-y46"/>
+                                                <constraint firstItem="Vtr-Q5-s2h" firstAttribute="leading" secondItem="q6O-Gu-B7G" secondAttribute="leading" constant="13" id="rDS-Ib-KdC"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vtr-Q5-s2h" secondAttribute="bottom" constant="22" id="rjc-Mz-Ib7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="OZ3-BO-6AN" id="gb6-bz-9fV"/>
+                                            <outlet property="profileImage" destination="Vtr-Q5-s2h" id="ovi-wP-n6b"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mJe-jJ-eu7"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2wh-6R-2pa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9Tg-Zo-6nR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fxd-l9-tae"/>
+                            <constraint firstItem="9Tg-Zo-6nR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RWH-YO-trg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="9Tg-Zo-6nR" secondAttribute="bottom" constant="34" id="Zll-N6-lOu"/>
+                            <constraint firstItem="9Tg-Zo-6nR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="c44-m9-DI5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="employeeTableView" destination="9Tg-Zo-6nR" id="P88-eK-8Gd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
         </scene>
     </scenes>
 </document>
