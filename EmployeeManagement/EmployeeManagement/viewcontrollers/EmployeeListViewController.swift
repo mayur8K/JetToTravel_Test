@@ -53,6 +53,12 @@ extension EmployeeListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "employeeDetail") as? EmployeeDetailsViewController
+        vc?.employeeDetails = employeeList[indexPath.row]
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
 }
 
 

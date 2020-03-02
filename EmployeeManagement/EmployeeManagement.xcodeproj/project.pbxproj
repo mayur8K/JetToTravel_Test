@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BE8EBE9240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8EBE8240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift */; };
+		9BE8EBEA240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8EBE8240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift */; };
+		9BE8EBEB240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8EBE8240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift */; };
 		9BF8FBBB240305EA005A7B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBBA240305EA005A7B14 /* AppDelegate.swift */; };
 		9BF8FBBD240305EA005A7B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF8FBBC240305EA005A7B14 /* SceneDelegate.swift */; };
 		9BF8FBC2240305EA005A7B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8FBC0240305EA005A7B14 /* Main.storyboard */; };
@@ -46,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9BE8EBE8240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsViewController.swift; sourceTree = "<group>"; };
 		9BF8FBB7240305EA005A7B14 /* EmployeeManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF8FBBA240305EA005A7B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BF8FBBC240305EA005A7B14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				9BF8FBF82409A695005A7B14 /* EmployeeListViewController.swift */,
+				9BE8EBE8240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift */,
 			);
 			path = viewcontrollers;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BF8FBF92409A695005A7B14 /* EmployeeListViewController.swift in Sources */,
+				9BE8EBE9240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift in Sources */,
 				9BF8FBEE24096647005A7B14 /* EmployeeModel.swift in Sources */,
 				9BF8FBBB240305EA005A7B14 /* AppDelegate.swift in Sources */,
 				9BF8FBFE2409A8E9005A7B14 /* EmployeeCell.swift in Sources */,
@@ -324,6 +330,7 @@
 				9BF8FBFA2409A695005A7B14 /* EmployeeListViewController.swift in Sources */,
 				9BF8FBEF24096647005A7B14 /* EmployeeModel.swift in Sources */,
 				9BF8FBF5240996A5005A7B14 /* EmployeeManagementTests.swift in Sources */,
+				9BE8EBEA240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift in Sources */,
 				9BF8FBF324096F84005A7B14 /* ApiService.swift in Sources */,
 				9BF8FBFF2409A8E9005A7B14 /* EmployeeCell.swift in Sources */,
 			);
@@ -336,6 +343,7 @@
 				9BF8FBFB2409A695005A7B14 /* EmployeeListViewController.swift in Sources */,
 				9BF8FBDD240305EE005A7B14 /* EmployeeManagementUITests.swift in Sources */,
 				9BF8FBF024096647005A7B14 /* EmployeeModel.swift in Sources */,
+				9BE8EBEB240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift in Sources */,
 				9BF8FBF724099832005A7B14 /* ApiService.swift in Sources */,
 				9BF8FC002409A8E9005A7B14 /* EmployeeCell.swift in Sources */,
 			);
