@@ -66,6 +66,17 @@ extension EmployeeListViewController: UITableViewDelegate {
         vc?.employeeDetails = sortedList[indexPath.row]
         self.navigationController?.pushViewController(vc!, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            sortedList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
 }
 
 
