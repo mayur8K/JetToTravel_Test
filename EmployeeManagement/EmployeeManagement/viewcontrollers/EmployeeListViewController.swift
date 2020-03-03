@@ -13,7 +13,7 @@ class EmployeeListViewController: UIViewController {
     @IBOutlet weak var employeeTableView:UITableView!
     var employeeList = [Employee]()
     var queryService = EmployeeApiService()
-
+    var sortedList = [Employee]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.employeeTableView.dataSource = self
@@ -21,6 +21,7 @@ class EmployeeListViewController: UIViewController {
         
         queryService.getDataForEmployees(urlString: EmployeeApiService.url) { (results, error) in
             self.employeeList = results.data!
+            self.sortEmployeeNames(list: self.employeeList)
             DispatchQueue.main.async {
                 self.employeeTableView.reloadData()
             }
@@ -33,16 +34,22 @@ class EmployeeListViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
+    
+    func sortEmployeeNames(list:[Employee]) {
+      sortedList =  list.sorted(by: { (user1, user2) -> Bool in
+               return (user1.name.lowercased(), user1.age) < (user2.name.lowercased(), user2.age)
+           })
+    }
 }
 
 extension EmployeeListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.employeeList.count
+        return self.sortedList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let employeeCell:EmployeeCell = tableView.dequeueReusableCell(withIdentifier: "empCell", for: indexPath) as! EmployeeCell
-        let employeeModel = self.employeeList[indexPath.row]
+        let employeeModel = self.sortedList[indexPath.row]
         employeeCell.configure(model: employeeModel)
         return employeeCell
     }
@@ -56,7 +63,7 @@ extension EmployeeListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "employeeDetail") as? EmployeeDetailsViewController
-        vc?.employeeDetails = employeeList[indexPath.row]
+        vc?.employeeDetails = sortedList[indexPath.row]
         self.navigationController?.pushViewController(vc!, animated: true)
     }
 }
