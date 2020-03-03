@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B9F1A66240E7EBF001169F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8FBC0240305EA005A7B14 /* Main.storyboard */; };
+		9B9F1A67240E7EC0001169F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF8FBC0240305EA005A7B14 /* Main.storyboard */; };
 		9BE8EBE9240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8EBE8240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift */; };
 		9BE8EBEA240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8EBE8240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift */; };
 		9BE8EBEB240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE8EBE8240C3D0E000A8FA5 /* EmployeeDetailsViewController.swift */; };
@@ -296,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9F1A66240E7EBF001169F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9F1A67240E7EC0001169F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

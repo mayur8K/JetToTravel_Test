@@ -9,29 +9,37 @@
 import XCTest
 
 class EmployeeManagementUITests: XCTestCase {
-
+    let app = XCUIApplication()
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app.launch()
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testdeleteEmployee() {
+       let employeeTable = app.tables.matching(identifier: "identifier_employeeList").firstMatch
+        waitFor(time: 1)
+        let cell = employeeTable.cells.firstMatch
+       var swipeCount = 0
+       while (!cell.isHittable || (cell.frame.minY + cell.frame.height) > employeeTable.frame.maxY ) && swipeCount < 5 {
+           employeeTable.swipeUp()
+           swipeCount = swipeCount + 1
+       }
+        cell.swipeLeft()
+        waitFor(time: 1)
+        app.buttons["Delete"].tap()
+        XCTAssert(true)
     }
 
+    func waitFor(time : TimeInterval){
+        XCTContext.runActivity(named: "Wait for \(time)") { _ in
+            XCUIApplication().children(matching: .button).matching(identifier:"ButtonWhichWillNeverExist").firstMatch.waitForExistence(timeout: time)
+        }
+    }
+
+    
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.

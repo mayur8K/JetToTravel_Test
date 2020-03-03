@@ -16,6 +16,7 @@ class EmployeeListViewController: UIViewController {
     var sortedList = [Employee]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        employeeTableView.accessibilityIdentifier = "identifier_employeeList"
         self.employeeTableView.dataSource = self
         self.employeeTableView.delegate = self
         
